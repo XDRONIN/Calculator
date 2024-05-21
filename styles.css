@@ -1,0 +1,36 @@
+body {
+  background-color: grey;
+  min-height: 100vh;
+  text-align: center;
+}
+.screen {
+  background-color: burlywood;
+  height: 10vh;
+  width: 50vh;
+  display: flex;
+}
+.calc {
+  background-color: aqua;
+  display: flexbox;
+
+  align-self: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.row {
+  display: flex;
+  justify-content: center;
+}
+.button {
+  display: flex;
+
+  flex-basis: 50vh;
+  height: 10vh;
+  justify-content: center;
+  align-items: center;
+}
+.op {
+  background-color: aqua;
+}
