@@ -12,12 +12,12 @@ let numindex = 0;
 let operatorButton = document.querySelectorAll(".op");
 operatorButton.forEach((operator) => {
   operator.addEventListener("click", () => {
-    if (numindex == 0 && idvalue != null) {
+    if (numindex == 0 && idvalue != "") {
       num[0] = idvalue;
 
       numindex += 1;
       setOperator(operator);
-    } else if (numindex == 1 && idvalue != null) {
+    } else if (numindex == 1 && idvalue != "") {
       num[1] = idvalue;
 
       findresult(num[0], num[1], OP);
