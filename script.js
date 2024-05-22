@@ -2,6 +2,7 @@ let numberButton = document.querySelectorAll(".num");
 numberButton.forEach((button) => {
   button.addEventListener("click", () => {
     idvalue += button.id;
+    display(idvalue);
   });
 });
 let result;
@@ -53,6 +54,7 @@ function findresult(num0, num1, op) {
         console.log("NUH-UH");
       }
   }
+  display(result);
 }
 function setOperator(operator) {
   let operatorid = operator.id;
@@ -96,4 +98,9 @@ clrButton.addEventListener("click", () => {
   num = [null];
   OP = "";
   numindex = 0;
+  display(result);
 });
+const screenP = document.getElementById("display");
+function display(result) {
+  screenP.innerText = result;
+}
