@@ -1,6 +1,7 @@
 let numberButton = document.querySelectorAll(".num");
 numberButton.forEach((button) => {
   button.addEventListener("click", () => {
+    clickSound.play();
     if (eqresult == true) {
       clear();
     }
@@ -17,6 +18,7 @@ let numindex = 0;
 let operatorButton = document.querySelectorAll(".op");
 operatorButton.forEach((operator) => {
   operator.addEventListener("click", () => {
+    clickSound.play();
     if (numindex == 0 && idvalue != "") {
       num[0] = idvalue;
 
@@ -90,6 +92,7 @@ function setOperator(operator) {
 }
 const equalButton = document.getElementById("equals");
 equalButton.addEventListener("click", () => {
+  clickSound.play();
   if (num[0] != null && idvalue != null) {
     num[1] = idvalue;
     findresult(num[0], num[1], OP);
@@ -107,6 +110,7 @@ function display(result) {
   screenP.innerText = result;
 }
 function clear() {
+  clickSound.play();
   result = null;
   idvalue = "";
   num = [null];
@@ -115,3 +119,5 @@ function clear() {
   display(result);
   eqresult = false;
 }
+let clickSound = new Audio();
+clickSound.src = "click.mp3";
