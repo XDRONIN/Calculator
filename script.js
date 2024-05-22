@@ -78,3 +78,14 @@ function setOperator(operator) {
       break;
   }
 }
+const equalButton = document.getElementById("equals");
+equalButton.addEventListener("click", () => {
+  if (num[0] != null && idvalue != null) {
+    num[1] = idvalue;
+    findresult(num[0], num[1], OP);
+    console.log(result);
+    numindex = 0;
+    idvalue = result;
+    num[0] = null;
+  }
+});
