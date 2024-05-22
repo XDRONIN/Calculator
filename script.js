@@ -42,7 +42,7 @@ function findresult(num0, num1, op) {
       result = num0 - num1;
 
       break;
-    case "x":
+    case "*":
       result = num0 * num1;
 
       break;
