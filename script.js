@@ -61,6 +61,7 @@ function findresult(num0, num1, op) {
       }
       break;
   }
+  result = Math.round(result * 100) / 100;
   display(result);
 }
 function setOperator(operator) {
