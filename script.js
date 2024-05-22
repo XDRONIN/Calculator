@@ -89,3 +89,11 @@ equalButton.addEventListener("click", () => {
     num[0] = null;
   }
 });
+const clrButton = document.getElementById("clear");
+clrButton.addEventListener("click", () => {
+  result = null;
+  idvalue = "";
+  num = [null];
+  OP = "";
+  numindex = 0;
+});
