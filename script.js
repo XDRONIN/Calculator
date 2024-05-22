@@ -1,10 +1,14 @@
 let numberButton = document.querySelectorAll(".num");
 numberButton.forEach((button) => {
   button.addEventListener("click", () => {
+    if (eqresult == true) {
+      clear();
+    }
     idvalue += button.id;
     display(idvalue);
   });
 });
+let eqresult;
 let result;
 let idvalue = "";
 let num = [];
@@ -17,6 +21,7 @@ operatorButton.forEach((operator) => {
       num[0] = idvalue;
 
       numindex += 1;
+
       setOperator(operator);
     } else if (numindex == 1 && idvalue != "") {
       num[1] = idvalue;
@@ -29,6 +34,7 @@ operatorButton.forEach((operator) => {
     }
 
     idvalue = "";
+    eqresult = false;
   });
 });
 function findresult(num0, num1, op) {
@@ -89,18 +95,21 @@ equalButton.addEventListener("click", () => {
     numindex = 0;
     idvalue = result;
     num[0] = null;
+    eqresult = true;
   }
 });
 const clrButton = document.getElementById("clear");
-clrButton.addEventListener("click", () => {
+clrButton.addEventListener("click", clear);
+const screenP = document.getElementById("display");
+function display(result) {
+  screenP.innerText = result;
+}
+function clear() {
   result = null;
   idvalue = "";
   num = [null];
   OP = "";
   numindex = 0;
   display(result);
-});
-const screenP = document.getElementById("display");
-function display(result) {
-  screenP.innerText = result;
+  eqresult = false;
 }
