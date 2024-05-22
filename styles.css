@@ -75,3 +75,14 @@ body {
   font-family: "digital-calc-font";
   src: url("digital-7-font/Digital7-rg1mL.ttf");
 }
+
+@media only screen and (max-width: 600px) {
+  .button {
+    flex-basis: 10vh;
+    height: 8vh;
+  }
+  .screen {
+    width: 30vh;
+    height: 15vh;
+  }
+}
