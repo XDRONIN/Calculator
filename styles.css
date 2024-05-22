@@ -9,7 +9,7 @@ body {
   width: 50vh;
   display: flex;
   flex-direction: column;
-
+  font-family: "digital-calc-font";
   font-size: 70px;
   justify-content: center;
   align-items: end;
@@ -70,4 +70,8 @@ body {
 }
 #clear {
   background: #dd5746;
+}
+@font-face {
+  font-family: "digital-calc-font";
+  src: url("digital-7-font/Digital7-rg1mL.ttf");
 }
